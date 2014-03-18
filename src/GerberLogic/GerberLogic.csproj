@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2906BDED-2099-47CE-8FD2-9D4B2D1FEE15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GerberLogic</RootNamespace>
+    <AssemblyName>GerberLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AsyncCtpLibrary">
+      <HintPath>..\UI\AsyncCtpLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apertures\ApertureFactory.cs" />
+    <Compile Include="Apertures\CircleAperture.cs" />
+    <Compile Include="Apertures\CustomAperture.cs" />
+    <Compile Include="Apertures\ObroundAperture.cs" />
+    <Compile Include="Apertures\PolygonAperture.cs" />
+    <Compile Include="Apertures\Primitives\CirclePrimitive.cs" />
+    <Compile Include="Apertures\Primitives\LinePrimitive.cs" />
+    <Compile Include="Apertures\Primitives\MoirePrimitive.cs" />
+    <Compile Include="Apertures\Primitives\OutlinePrimitive.cs" />
+    <Compile Include="Apertures\Primitives\PolygonPrimitive.cs" />
+    <Compile Include="Apertures\Primitives\Primitive.cs" />
+    <Compile Include="Apertures\Primitives\PrimitiveParameters\CalculatedPrimitiveParameter.cs" />
+    <Compile Include="Apertures\Primitives\PrimitiveParameters\iPrimitiveParameter.cs" />
+    <Compile Include="Apertures\Primitives\PrimitiveParameters\ValuePrimitiveParameter.cs" />
+    <Compile Include="Apertures\Primitives\RectangleCentrePrimitive.cs" />
+    <Compile Include="Apertures\Primitives\RectangleLowerLeftPrimitive.cs" />
+    <Compile Include="Apertures\Primitives\ThermalPrimitive.cs" />
+    <Compile Include="Apertures\RectangleAperture.cs" />
+    <Compile Include="Apertures\StandardAperture.cs" />
+    <Compile Include="AxisMirrorImage.cs" />
+    <Compile Include="BitmapArtist.cs" />
+    <Compile Include="CommandNumberFormat.cs" />
+    <Compile Include="Commands\AD.cs" />
+    <Compile Include="Commands\AM.cs" />
+    <Compile Include="Commands\AS.cs" />
+    <Compile Include="Commands\D.cs" />
+    <Compile Include="Commands\D1.cs" />
+    <Compile Include="Commands\D2.cs" />
+    <Compile Include="Commands\D3.cs" />
+    <Compile Include="Commands\FS.cs" />
+    <Compile Include="Commands\G0.cs" />
+    <Compile Include="Commands\G1.cs" />
+    <Compile Include="Commands\G10.cs" />
+    <Compile Include="Commands\G11.cs" />
+    <Compile Include="Commands\G12.cs" />
+    <Compile Include="Commands\G2.cs" />
+    <Compile Include="Commands\G3.cs" />
+    <Compile Include="Commands\G36.cs" />
+    <Compile Include="Commands\G37.cs" />
+    <Compile Include="Commands\G4.cs" />
+    <Compile Include="Commands\G54.cs" />
+    <Compile Include="Commands\G55.cs" />
+    <Compile Include="Commands\G70.cs" />
+    <Compile Include="Commands\G71.cs" />
+    <Compile Include="Commands\G74.cs" />
+    <Compile Include="Commands\G75.cs" />
+    <Compile Include="Commands\G90.cs" />
+    <Compile Include="Commands\G91.cs" />
+    <Compile Include="Commands\iCommand.cs" />
+    <Compile Include="Commands\IJ.cs" />
+    <Compile Include="Commands\IN.cs" />
+    <Compile Include="Commands\IO.cs" />
+    <Compile Include="Commands\IP.cs" />
+    <Compile Include="Commands\IR.cs" />
+    <Compile Include="Commands\KO.cs" />
+    <Compile Include="Commands\LN.cs" />
+    <Compile Include="Commands\LP.cs" />
+    <Compile Include="Commands\MI.cs" />
+    <Compile Include="Commands\MO.cs" />
+    <Compile Include="Commands\OF.cs" />
+    <Compile Include="Commands\PF.cs" />
+    <Compile Include="Commands\SF.cs" />
+    <Compile Include="Commands\SR.cs" />
+    <Compile Include="Commands\UnknownCommand.cs" />
+    <Compile Include="DrawingElements\Circle.cs" />
+    <Compile Include="DrawingElements\Element.cs" />
+    <Compile Include="DrawingElements\Flash.cs" />
+    <Compile Include="DrawingElements\Line.cs" />
+    <Compile Include="FileParser.cs" />
+    <Compile Include="FileParserDefinitions.cs" />
+    <Compile Include="GerberGraphicsPath.cs" />
+    <Compile Include="GerberImage.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Justification.cs" />
+    <Compile Include="Knockout.cs" />
+    <Compile Include="Layer.cs" />
+    <Compile Include="NumberFormat.cs" />
+    <Compile Include="Offset.cs" />
+    <Compile Include="ParseExcellonFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepAndRepeat.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

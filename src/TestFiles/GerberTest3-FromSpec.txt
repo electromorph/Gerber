@@ -1,0 +1,17 @@
+*G04 EXAMPLE 1: 2 BOXES
+%FSLAX23Y23*% Format statement - leading zeroes omitted,
+absolute coordinates, X2.3, Y2.3.
+%MOIN*% Set units to inches.
+%OFA0B0*% No offset
+%SFA1.0B1.0*% Scale factor is A1, B1
+%ADD10C,0.010*% Define aperture D-code 10 - 10 mil circle
+%LNBOXES*% Name layer “BOXES”.
+G54D10
+X0Y0D02*X5000Y0D01*
+X5000Y5000D01*X0Y5000D01*X0Y0D01* RS-274D data
+X6000Y0*X11000Y0D01*
+Rules and Guidelines
+11
+X11000Y5000D01*X6000Y5000D01*
+X6000Y0D01*D02*
+M02*
